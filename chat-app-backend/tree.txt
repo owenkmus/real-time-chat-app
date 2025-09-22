@@ -1,0 +1,286 @@
+chat-app/
+├─ chat-app-backend/
+│  ├─ config/
+│  │  └─ database.js
+│  ├─ src/
+│  │  ├─ controllers/
+│  │  │  ├─ auth.controller.js
+│  │  │  └─ chat.controller.js
+│  │  ├─ middlewares/
+│  │  │  ├─ auth.middleware.js
+│  │  │  ├─ errorHandler.middleware.js
+│  │  │  └─ validation.middleware.js
+│  │  ├─ models/
+│  │  │  ├─ chatRoom.model.js
+│  │  │  ├─ index.js
+│  │  │  ├─ message.model.js
+│  │  │  ├─ user.model.js
+│  │  │  └─ userChatRoom.model.js
+│  │  ├─ routes/
+│  │  │  ├─ auth.routes.js
+│  │  │  └─ chat.routes.js
+│  │  ├─ services/
+│  │  │  └─ socket.service.js
+│  │  └─ utils/
+│  │     ├─ jwt.util.js
+│  │     ├─ logger.util.js
+│  │     └─ validation.schemas.js
+│  ├─ .env
+│  ├─ package-lock.json
+│  ├─ package.json
+│  ├─ server.js
+│  └─ tree.txt
+└─ chat-app-frontend/
+   ├─ .angular/
+   │  └─ cache/
+   │     └─ 20.3.2/
+   │        └─ chat-app-frontend/
+   │           ├─ vite/
+   │           │  ├─ deps/
+   │           │  │  ├─ _metadata.json
+   │           │  │  ├─ @angular_cdk_bidi.js
+   │           │  │  ├─ @angular_cdk_bidi.js.map
+   │           │  │  ├─ @angular_cdk_scrolling.js
+   │           │  │  ├─ @angular_cdk_scrolling.js.map
+   │           │  │  ├─ @angular_cdk_text-field.js
+   │           │  │  ├─ @angular_cdk_text-field.js.map
+   │           │  │  ├─ @angular_common_http.js
+   │           │  │  ├─ @angular_common_http.js.map
+   │           │  │  ├─ @angular_common.js
+   │           │  │  ├─ @angular_common.js.map
+   │           │  │  ├─ @angular_core.js
+   │           │  │  ├─ @angular_core.js.map
+   │           │  │  ├─ @angular_forms.js
+   │           │  │  ├─ @angular_forms.js.map
+   │           │  │  ├─ @angular_material_button.js
+   │           │  │  ├─ @angular_material_button.js.map
+   │           │  │  ├─ @angular_material_card.js
+   │           │  │  ├─ @angular_material_card.js.map
+   │           │  │  ├─ @angular_material_form-field.js
+   │           │  │  ├─ @angular_material_form-field.js.map
+   │           │  │  ├─ @angular_material_icon.js
+   │           │  │  ├─ @angular_material_icon.js.map
+   │           │  │  ├─ @angular_material_input.js
+   │           │  │  ├─ @angular_material_input.js.map
+   │           │  │  ├─ @angular_material_list.js
+   │           │  │  ├─ @angular_material_list.js.map
+   │           │  │  ├─ @angular_material_sidenav.js
+   │           │  │  ├─ @angular_material_sidenav.js.map
+   │           │  │  ├─ @angular_material_toolbar.js
+   │           │  │  ├─ @angular_material_toolbar.js.map
+   │           │  │  ├─ @angular_platform-browser_animations.js
+   │           │  │  ├─ @angular_platform-browser_animations.js.map
+   │           │  │  ├─ @angular_platform-browser.js
+   │           │  │  ├─ @angular_platform-browser.js.map
+   │           │  │  ├─ @angular_router.js
+   │           │  │  ├─ @angular_router.js.map
+   │           │  │  ├─ chunk-4YQGSLFD.js
+   │           │  │  ├─ chunk-4YQGSLFD.js.map
+   │           │  │  ├─ chunk-653SOEEV.js
+   │           │  │  ├─ chunk-653SOEEV.js.map
+   │           │  │  ├─ chunk-7UJZXIJQ.js
+   │           │  │  ├─ chunk-7UJZXIJQ.js.map
+   │           │  │  ├─ chunk-BTDIALSO.js
+   │           │  │  ├─ chunk-BTDIALSO.js.map
+   │           │  │  ├─ chunk-BZDGARRK.js
+   │           │  │  ├─ chunk-BZDGARRK.js.map
+   │           │  │  ├─ chunk-EZLUQWIR.js
+   │           │  │  ├─ chunk-EZLUQWIR.js.map
+   │           │  │  ├─ chunk-GQ4MIGFT.js
+   │           │  │  ├─ chunk-GQ4MIGFT.js.map
+   │           │  │  ├─ chunk-ICJBZ5AZ.js
+   │           │  │  ├─ chunk-ICJBZ5AZ.js.map
+   │           │  │  ├─ chunk-IRPWT7YM.js
+   │           │  │  ├─ chunk-IRPWT7YM.js.map
+   │           │  │  ├─ chunk-KE5HYC7V.js
+   │           │  │  ├─ chunk-KE5HYC7V.js.map
+   │           │  │  ├─ chunk-MGIPN7VC.js
+   │           │  │  ├─ chunk-MGIPN7VC.js.map
+   │           │  │  ├─ chunk-NHMH37JT.js
+   │           │  │  ├─ chunk-NHMH37JT.js.map
+   │           │  │  ├─ chunk-ODKXOY72.js
+   │           │  │  ├─ chunk-ODKXOY72.js.map
+   │           │  │  ├─ chunk-OQP2CZFN.js
+   │           │  │  ├─ chunk-OQP2CZFN.js.map
+   │           │  │  ├─ chunk-QOU5WGRN.js
+   │           │  │  ├─ chunk-QOU5WGRN.js.map
+   │           │  │  ├─ chunk-RSS3ODKE.js
+   │           │  │  ├─ chunk-RSS3ODKE.js.map
+   │           │  │  ├─ chunk-SZBOL563.js
+   │           │  │  ├─ chunk-SZBOL563.js.map
+   │           │  │  ├─ chunk-UL3GAHQN.js
+   │           │  │  ├─ chunk-UL3GAHQN.js.map
+   │           │  │  ├─ chunk-VNH63AI6.js
+   │           │  │  ├─ chunk-VNH63AI6.js.map
+   │           │  │  ├─ chunk-XS3NYISJ.js
+   │           │  │  ├─ chunk-XS3NYISJ.js.map
+   │           │  │  ├─ chunk-ZJ25XCV3.js
+   │           │  │  ├─ chunk-ZJ25XCV3.js.map
+   │           │  │  ├─ package.json
+   │           │  │  ├─ rxjs.js
+   │           │  │  ├─ rxjs.js.map
+   │           │  │  ├─ socket__io-client.js
+   │           │  │  └─ socket__io-client.js.map
+   │           │  ├─ deps_ssr/
+   │           │  │  ├─ _metadata.json
+   │           │  │  ├─ @angular_cdk_bidi.js
+   │           │  │  ├─ @angular_cdk_bidi.js.map
+   │           │  │  ├─ @angular_cdk_scrolling.js
+   │           │  │  ├─ @angular_cdk_scrolling.js.map
+   │           │  │  ├─ @angular_cdk_text-field.js
+   │           │  │  ├─ @angular_cdk_text-field.js.map
+   │           │  │  ├─ @angular_common_http.js
+   │           │  │  ├─ @angular_common_http.js.map
+   │           │  │  ├─ @angular_common.js
+   │           │  │  ├─ @angular_common.js.map
+   │           │  │  ├─ @angular_core.js
+   │           │  │  ├─ @angular_core.js.map
+   │           │  │  ├─ @angular_forms.js
+   │           │  │  ├─ @angular_forms.js.map
+   │           │  │  ├─ @angular_material_button.js
+   │           │  │  ├─ @angular_material_button.js.map
+   │           │  │  ├─ @angular_material_card.js
+   │           │  │  ├─ @angular_material_card.js.map
+   │           │  │  ├─ @angular_material_form-field.js
+   │           │  │  ├─ @angular_material_form-field.js.map
+   │           │  │  ├─ @angular_material_icon.js
+   │           │  │  ├─ @angular_material_icon.js.map
+   │           │  │  ├─ @angular_material_input.js
+   │           │  │  ├─ @angular_material_input.js.map
+   │           │  │  ├─ @angular_material_list.js
+   │           │  │  ├─ @angular_material_list.js.map
+   │           │  │  ├─ @angular_material_sidenav.js
+   │           │  │  ├─ @angular_material_sidenav.js.map
+   │           │  │  ├─ @angular_material_toolbar.js
+   │           │  │  ├─ @angular_material_toolbar.js.map
+   │           │  │  ├─ @angular_platform-browser_animations.js
+   │           │  │  ├─ @angular_platform-browser_animations.js.map
+   │           │  │  ├─ @angular_platform-browser.js
+   │           │  │  ├─ @angular_platform-browser.js.map
+   │           │  │  ├─ @angular_platform-server_init.js
+   │           │  │  ├─ @angular_platform-server_init.js.map
+   │           │  │  ├─ @angular_router.js
+   │           │  │  ├─ @angular_router.js.map
+   │           │  │  ├─ @angular_ssr_node.js
+   │           │  │  ├─ @angular_ssr_node.js.map
+   │           │  │  ├─ @angular_ssr.js
+   │           │  │  ├─ @angular_ssr.js.map
+   │           │  │  ├─ chunk-2PVR6FAW.js
+   │           │  │  ├─ chunk-2PVR6FAW.js.map
+   │           │  │  ├─ chunk-2U2MPJ7X.js
+   │           │  │  ├─ chunk-2U2MPJ7X.js.map
+   │           │  │  ├─ chunk-3EVLEYEM.js
+   │           │  │  ├─ chunk-3EVLEYEM.js.map
+   │           │  │  ├─ chunk-5BXVB7N6.js
+   │           │  │  ├─ chunk-5BXVB7N6.js.map
+   │           │  │  ├─ chunk-5HFJT33O.js
+   │           │  │  ├─ chunk-5HFJT33O.js.map
+   │           │  │  ├─ chunk-5SRSLSS4.js
+   │           │  │  ├─ chunk-5SRSLSS4.js.map
+   │           │  │  ├─ chunk-6SSHUOWM.js
+   │           │  │  ├─ chunk-6SSHUOWM.js.map
+   │           │  │  ├─ chunk-ANNB5HIZ.js
+   │           │  │  ├─ chunk-ANNB5HIZ.js.map
+   │           │  │  ├─ chunk-B22DVCYO.js
+   │           │  │  ├─ chunk-B22DVCYO.js.map
+   │           │  │  ├─ chunk-DBB3IMJI.js
+   │           │  │  ├─ chunk-DBB3IMJI.js.map
+   │           │  │  ├─ chunk-EUESDJXR.js
+   │           │  │  ├─ chunk-EUESDJXR.js.map
+   │           │  │  ├─ chunk-FQL6O3MQ.js
+   │           │  │  ├─ chunk-FQL6O3MQ.js.map
+   │           │  │  ├─ chunk-GBURFJW7.js
+   │           │  │  ├─ chunk-GBURFJW7.js.map
+   │           │  │  ├─ chunk-IMQPVOGS.js
+   │           │  │  ├─ chunk-IMQPVOGS.js.map
+   │           │  │  ├─ chunk-L4PTPDRS.js
+   │           │  │  ├─ chunk-L4PTPDRS.js.map
+   │           │  │  ├─ chunk-LOG2O3GC.js
+   │           │  │  ├─ chunk-LOG2O3GC.js.map
+   │           │  │  ├─ chunk-OF4KRNF2.js
+   │           │  │  ├─ chunk-OF4KRNF2.js.map
+   │           │  │  ├─ chunk-P4GNISSK.js
+   │           │  │  ├─ chunk-P4GNISSK.js.map
+   │           │  │  ├─ chunk-S3R7XXYJ.js
+   │           │  │  ├─ chunk-S3R7XXYJ.js.map
+   │           │  │  ├─ chunk-SXBPXIBZ.js
+   │           │  │  ├─ chunk-SXBPXIBZ.js.map
+   │           │  │  ├─ chunk-VYBK2723.js
+   │           │  │  ├─ chunk-VYBK2723.js.map
+   │           │  │  ├─ chunk-W3FGK4IJ.js
+   │           │  │  ├─ chunk-W3FGK4IJ.js.map
+   │           │  │  ├─ chunk-WOT5Y5YU.js
+   │           │  │  ├─ chunk-WOT5Y5YU.js.map
+   │           │  │  ├─ chunk-ZENMXKSP.js
+   │           │  │  ├─ chunk-ZENMXKSP.js.map
+   │           │  │  ├─ express.js
+   │           │  │  ├─ express.js.map
+   │           │  │  ├─ package.json
+   │           │  │  ├─ rxjs.js
+   │           │  │  ├─ rxjs.js.map
+   │           │  │  ├─ socket__io-client.js
+   │           │  │  ├─ socket__io-client.js.map
+   │           │  │  ├─ xhr2-HRNNOUCA.js
+   │           │  │  └─ xhr2-HRNNOUCA.js.map
+   │           │  └─ com.chrome.devtools.json
+   │           └─ .tsbuildinfo
+   ├─ .vscode/
+   │  ├─ extensions.json
+   │  ├─ launch.json
+   │  └─ tasks.json
+   ├─ public/
+   │  └─ favicon.ico
+   ├─ src/
+   │  ├─ app/
+   │  │  ├─ auth/
+   │  │  │  ├─ login/
+   │  │  │  │  ├─ login.css
+   │  │  │  │  ├─ login.html
+   │  │  │  │  ├─ login.spec.ts
+   │  │  │  │  └─ login.ts
+   │  │  │  └─ register/
+   │  │  │     ├─ register.css
+   │  │  │     ├─ register.html
+   │  │  │     ├─ register.spec.ts
+   │  │  │     └─ register.ts
+   │  │  ├─ chat/
+   │  │  │  └─ chat-window/
+   │  │  │     ├─ chat-window.css
+   │  │  │     ├─ chat-window.html
+   │  │  │     ├─ chat-window.spec.ts
+   │  │  │     └─ chat-window.ts
+   │  │  ├─ guards/
+   │  │  │  ├─ auth-guard.spec.ts
+   │  │  │  └─ auth-guard.ts
+   │  │  ├─ interceptors/
+   │  │  │  └─ jwt.interceptor.ts
+   │  │  ├─ services/
+   │  │  │  ├─ auth.service.spec.ts
+   │  │  │  ├─ auth.service.ts
+   │  │  │  ├─ chat.service.spec.ts
+   │  │  │  ├─ chat.service.ts
+   │  │  │  ├─ socket.service.spec.ts
+   │  │  │  └─ socket.service.ts
+   │  │  ├─ app-module.ts
+   │  │  ├─ app-routing-module.ts
+   │  │  ├─ app.css
+   │  │  ├─ app.html
+   │  │  ├─ app.module.server.ts
+   │  │  ├─ app.routes.server.ts
+   │  │  ├─ app.spec.ts
+   │  │  └─ app.ts
+   │  ├─ custom-theme.scss
+   │  ├─ index.html
+   │  ├─ main.server.ts
+   │  ├─ main.ts
+   │  ├─ server.ts
+   │  └─ styles.css
+   ├─ .editorconfig
+   ├─ .gitignore
+   ├─ angular.json
+   ├─ package-lock.json
+   ├─ package.json
+   ├─ README.md
+   ├─ tsconfig.app.json
+   ├─ tsconfig.json
+   └─ tsconfig.spec.json

@@ -1,0 +1,64 @@
+<mat-sidenav-container class="chat-container">
+  <!-- Barra Lateral -->
+  <mat-sidenav mode="side" opened class="sidenav">
+    <mat-toolbar color="primary">
+      Salas de Chat
+    </mat-toolbar>
+
+    <!-- Formulario para crear salas -->
+    <div class="room-creator">
+      <form [formGroup]="createRoomForm" (ngSubmit)="onCreateRoom()">
+        <mat-form-field appearance="outline" class="room-name-input">
+          <mat-label>Nueva sala</mat-label>
+          <input matInput formControlName="name" placeholder="Nombre de la sala">
+        </mat-form-field>
+        <button mat-mini-fab color="primary" type="submit" [disabled]="!createRoomForm.valid">
+          <mat-icon>add</mat-icon>
+        </button>
+      </form>
+    </div>
+
+    <!-- Lista de salas de chat -->
+    <mat-list>
+      <mat-list-item *ngFor="let room of chatRooms" (click)="selectRoom(room)" [class.selected-room]="selectedRoom?.id === room.id">
+        <mat-icon matListItemIcon>chat_bubble</mat-icon>
+        <div matListItemTitle>{{ room.name }}</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <!-- Contenido Principal del Chat -->
+  <mat-sidenav-content class="chat-content">
+    <div *ngIf="selectedRoom; else noRoomSelected" class="messages-container">
+      <mat-toolbar>
+        <span>{{ selectedRoom.name }}</span>
+      </mat-toolbar>
+
+      <!-- Lista de Mensajes -->
+      <div class="messages-list">
+        <div *ngFor="let msg of messages" class="message-item">
+          <strong>{{ msg.user.username }}:</strong> {{ msg.content }}
+        </div>
+      </div>
+
+      <!-- Formulario para enviar mensajes -->
+      <form [formGroup]="messageForm" (ngSubmit)="sendMessage()" class="message-form">
+        <mat-form-field appearance="outline" class="message-input">
+          <mat-label>Escribe un mensaje...</mat-label>
+          <input matInput formControlName="content">
+        </mat-form-field>
+        <button mat-fab color="primary" type="submit" [disabled]="!messageForm.valid">
+          <mat-icon>send</mat-icon>
+        </button>
+      </form>
+    </div>
+
+    <!-- Mensaje cuando no hay sala seleccionada -->
+    <ng-template #noRoomSelected>
+      <div class="no-room-selected">
+        <mat-icon>chat</mat-icon>
+        <p>Selecciona o crea una sala para empezar a chatear</p>
+      </div>
+    </ng-template>
+  </mat-sidenav-content>
+</mat-sidenav-container>

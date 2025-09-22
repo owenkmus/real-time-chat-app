@@ -1,0 +1,54 @@
+<div class="register-container">
+  <mat-card>
+    <mat-card-title>Crear una Cuenta</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <!-- Campo para el nombre de usuario -->
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre de usuario</mat-label>
+          <input matInput formControlName="username" placeholder="ej: usuario123" required>
+          <mat-error *ngIf="registerForm.get('username')?.hasError('required')">
+            El nombre de usuario es requerido.
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Campo para el email -->
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" placeholder="ej: tu@email.com" required>
+          <mat-error *ngIf="registerForm.get('email')?.hasError('required')">
+            El email es requerido.
+          </mat-error>
+          <mat-error *ngIf="registerForm.get('email')?.hasError('email')">
+            Por favor, ingresa un email válido.
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Campo para la contraseña -->
+        <mat-form-field appearance="fill">
+          <mat-label>Contraseña</mat-label>
+          <input matInput formControlName="password" type="password" required>
+           <mat-error *ngIf="registerForm.get('password')?.hasError('required')">
+            La contraseña es requerida.
+          </mat-error>
+          <mat-error *ngIf="registerForm.get('password')?.hasError('minlength')">
+            La contraseña debe tener al menos 6 caracteres.
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Mensaje de error general -->
+        <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+        <!-- Botón de envío -->
+        <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.valid">
+          Registrarse
+        </button>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <a routerLink="/login">¿Ya tienes una cuenta? Inicia sesión</a>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+
